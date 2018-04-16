@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>studentrequests</title>
+</head>
+<body>
+<div class="container">
+        <h2>Product List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>student</th>
+                <th></th>
+                <th>Price</th>
+                <th>Image URL</th>
+            </tr>
+            <tr th:each="product : ${products}">
+                <td th:text="${product.id}"></td>
+                <td th:text="${product.description}"></td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.imageUrl}"></td>        
+            </tr>
+        </table>
+</div>
+</body>
+</html>
